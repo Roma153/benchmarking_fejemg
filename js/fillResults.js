@@ -1,5 +1,4 @@
 $(window).load(function() {
- console.log("window is loaded");
  fillResults();
 });
 

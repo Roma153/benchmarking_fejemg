@@ -52,7 +52,6 @@ function fillDepartments() {
 			var $i;
 			$select = '<option value=\'Todos os Departamentos\'>Todos os Departamentos</option>';
 			for ($i=0; $i<$result.length; $i++) {
-				console.log($result[$i]);
 				$select += '<option value=\''+ $result[$i]+'\'>'+$result[$i]+'</option>';
 			}
 			$('#department').find('option').remove();
@@ -78,7 +77,6 @@ function fillActivities() {
 			$select = '<option value=\'Todas as Atividades\'>Todas as Atividades</option>';	
 			
 			for ($i=0; $i<$result.length; $i++) {
-				console.log($result[$i]);
 				$select += '<option value=\''+ $result[$i]+'\'>'+$result[$i]+'</option>';
 			}
 			$('#activity').find('option').remove();
