@@ -4,7 +4,15 @@
    Author's custom styles
    ========================================================================== */
 
+.img-logos{
+	height: 140px;
+	width: 140px;    
+}
 
+td {
+	height: 50px;
+    vertical-align: middle !important;
+}
 
 
 

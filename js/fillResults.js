@@ -47,18 +47,18 @@ function buildTable($result){
 		
 	for($i=0; $i<$result.length-1; $i++){
 		console.log($result[$i]);	
-		if($result[$i]['name'] != $activity && $("#activity").val() == "Todas as Atividades"){
-			$table += '<tr class="warning">';
+		if($result[$i]['name'] != $activity){
+			$table += '<tr class="active">';
 			$table += '<td colspan="6" class="text-center lead">' + $result[$i]['name'] + '</td>';
 			$table += '</tr>';
 		}
 		$table += '<tr>';
-		$table += '<td>Logo</td>';
+		$table += '<td><img src="' + $result[$i]['image'] + '" alt="Logo" class="img-logos"></td>';
 		$table += '<td>'+ $result[$i]['abbreviation'] +'</td>';
 		$table += '<td>'+ $result[$i]['email'] +'</td>';
 		$table += '<td>'+ $result[$i]['phone'] +'</td>';
 		$table += '<td>'+ $result[$i]['website'] +'</td>';
-		$table += '<td>Classificação</td>';
+		$table += '<td>' + $result[$i]['classification'] + ' estrelas</td>';
 		$table += '</tr>';
 		console.log($result[$i]);
 	}	      
