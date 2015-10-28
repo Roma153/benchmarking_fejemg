@@ -1,5 +1,5 @@
 $(window).load(function() {
- //fillResults();
+ fillResults();
 });
 
 $( "#cities" ).change(function() {
@@ -36,37 +36,31 @@ function fillResults(){
 }
 
 function buildTable($result){
-	var $i, $j;
+	var $i;
 	var $table = '';
+	var $activity;
 
-	$table += '<table class="table table-striped"> <thead> <tr>'; 
-	$table += '<th>Logo</th> <th>Nome</th> <th>Email</th> <th>Telefone</th> <th>Website</th> <th>Classificação</th> </tr>';
-	$table += '</thead> <tbody>'
+	$table += '<table class="table table-striped"> <thead> '; 
+//	$table += '<tr><th>Logo</th> <th>Nome</th> <th>Email</th> <th>Telefone</th> <th>Website</th> <th>Classificação</th> </tr>';
+	$table += '</thead>';
+	$table += '<tbody>';
 		
 	for($i=0; $i<$result.length-1; $i++){
-		for($j=0; $i<$result.length-1; $i++){
-			if($result[$i]['abbreviation'] == $result[$j]['abbreviation'] && $i<=$j){
-				console.log($result[$i]);		
-				$table += '<tr>';
-				$table += '<td></td>';
-				$table += '<td>'+ $result[$i]['abbreviation'] +'</td>';
-				$table += '<td>'+ $result[$i]['email'] +'</td>';
-				$table += '<td>'+ $result[$i]['phone'] +'</td>';
-				$table += '<td>'+ $result[$i]['website'] +'</td>';
-				$table += '<td></td>';
-				$table += '</tr>';
-			} else if($result[$i]['abbreviation'] != $result[$j]['abbreviation']){
-				console.log($result[$i]);		
-				$table += '<tr>';
-				$table += '<td></td>';
-				$table += '<td>'+ $result[$i]['abbreviation'] +'</td>';
-				$table += '<td>'+ $result[$i]['email'] +'</td>';
-				$table += '<td>'+ $result[$i]['phone'] +'</td>';
-				$table += '<td>'+ $result[$i]['website'] +'</td>';
-				$table += '<td></td>';
-				$table += '</tr>';				
-			}			
+		console.log($result[$i]);	
+		if($result[$i]['name'] != $activity && $("#activity").val() == "Todas as Atividades"){
+			$table += '<tr class="warning">';
+			$table += '<td colspan="6" class="text-center lead">' + $result[$i]['name'] + '</td>';
+			$table += '</tr>';
 		}
+		$table += '<tr>';
+		$table += '<td>Logo</td>';
+		$table += '<td>'+ $result[$i]['abbreviation'] +'</td>';
+		$table += '<td>'+ $result[$i]['email'] +'</td>';
+		$table += '<td>'+ $result[$i]['phone'] +'</td>';
+		$table += '<td>'+ $result[$i]['website'] +'</td>';
+		$table += '<td>Classificação</td>';
+		$table += '</tr>';
+		console.log($result[$i]);
 	}	      
   	$table += '</tbody>  </table>';
   	//console.log($table);	
