@@ -74,7 +74,7 @@ function fillActivities() {
 		dataType : "json",
 		success : function($result){
 			var $i;
-			$select = '<option value=\'Todas as Atividades\'>Todas as Atividades</option>';	
+			$select = '<option value=\'Todas as Atividades\'>Escolha uma Atividade</option>';	
 			
 			for ($i=0; $i<$result.length; $i++) {
 				$select += '<option value=\''+ $result[$i]+'\'>'+$result[$i]+'</option>';
