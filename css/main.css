@@ -5,12 +5,13 @@
    ========================================================================== */
 
 .img-logos{
-	height: 140px;
-	width: 140px;    
+	height: auto;
+	width: 140px;
+	max-height: 140px;    
 }
 
 td {
-	height: 50px;
+	height: 100px;
     vertical-align: middle !important;
 }
 
