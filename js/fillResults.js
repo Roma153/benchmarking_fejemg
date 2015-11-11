@@ -50,7 +50,7 @@ function buildTable($result){
 			for($j=0; $j<$result.length-1; $j++){
 				console.log($result[$i]);	
 				if($result[$i]['name'] != $activity){
-					$table += '<tr class="active">';
+					$table += '<tr class="info">';
 					$table += '<td colspan="6" class="text-center lead">' + $result[$i]['name'] + '</td>';
 					$table += '</tr>';
 					$activity = $result[$i]['name'];
@@ -58,10 +58,10 @@ function buildTable($result){
 				if($result[$i]['name'] == $result[$j]['name']){
 					$table += '<tr>';
 					$table += '<td><img src="' + $result[$j]['image'] + '" alt="Logo" class="img-logos"></td>';
-					$table += '<td>'+ $result[$j]['abbreviation'] +'</td>';
+					$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
 					$table += '<td>'+ $result[$j]['email'] +'</td>';
 					$table += '<td>'+ $result[$j]['phone'] +'</td>';
-					$table += '<td>'+ $result[$j]['website'] +'</td>';
+					$table += '<td><a href="'+ $result[$j]['website'] +'" target="_blank">'+ $result[$j]['website'] +'</a></td>';
 					$table += '<td>'; 
 					for($k=0; $k<$result[$j]['classification']; $k++){
 						$table += '<img src="resources/images/gold_star_icon.png" alt="' + $result[$j]['classification'] + ' estrelas">';
