@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.0.10.7
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 11, 2015 at 03:40 AM
--- Server version: 5.5.46-0ubuntu0.14.04.2
--- PHP Version: 5.5.9-1ubuntu4.13
+-- Servidor: localhost
+-- Tempo de Geração: 11/11/2015 às 19:17
+-- Versão do servidor: 5.5.40-36.1-log
+-- Versão do PHP: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `fejemg`
+-- Banco de dados: `fejemg_bd_unificado`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `activity`
+-- Estrutura para tabela `activity`
 --
 
 CREATE TABLE IF NOT EXISTS `activity` (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `activity` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=116 ;
 
 --
--- Dumping data for table `activity`
+-- Fazendo dump de dados para tabela `activity`
 --
 
 INSERT INTO `activity` (`id`, `name`, `department_id`, `created_at`) VALUES
@@ -114,7 +114,7 @@ INSERT INTO `activity` (`id`, `name`, `department_id`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `activity_classification`
+-- Estrutura para tabela `activity_classification`
 --
 
 CREATE TABLE IF NOT EXISTS `activity_classification` (
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `activity_classification` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `activity_classification`
+-- Fazendo dump de dados para tabela `activity_classification`
 --
 
 INSERT INTO `activity_classification` (`je_id`, `activity_id`, `classification`) VALUES
@@ -2455,7 +2455,7 @@ INSERT INTO `activity_classification` (`je_id`, `activity_id`, `classification`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `administradores`
+-- Estrutura para tabela `administradores`
 --
 
 CREATE TABLE IF NOT EXISTS `administradores` (
@@ -2470,7 +2470,7 @@ CREATE TABLE IF NOT EXISTS `administradores` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cities`
+-- Estrutura para tabela `cities`
 --
 
 CREATE TABLE IF NOT EXISTS `cities` (
@@ -2482,7 +2482,7 @@ CREATE TABLE IF NOT EXISTS `cities` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5565 ;
 
 --
--- Dumping data for table `cities`
+-- Fazendo dump de dados para tabela `cities`
 --
 
 INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
@@ -8056,7 +8056,7 @@ INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `countries`
+-- Estrutura para tabela `countries`
 --
 
 CREATE TABLE IF NOT EXISTS `countries` (
@@ -8067,7 +8067,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `countries`
+-- Fazendo dump de dados para tabela `countries`
 --
 
 INSERT INTO `countries` (`id`, `name`, `abbreviation`) VALUES
@@ -8076,7 +8076,7 @@ INSERT INTO `countries` (`id`, `name`, `abbreviation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `department`
+-- Estrutura para tabela `department`
 --
 
 CREATE TABLE IF NOT EXISTS `department` (
@@ -8087,7 +8087,7 @@ CREATE TABLE IF NOT EXISTS `department` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
--- Dumping data for table `department`
+-- Fazendo dump de dados para tabela `department`
 --
 
 INSERT INTO `department` (`id`, `name`, `created_at`) VALUES
@@ -8111,7 +8111,7 @@ INSERT INTO `department` (`id`, `name`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fields`
+-- Estrutura para tabela `fields`
 --
 
 CREATE TABLE IF NOT EXISTS `fields` (
@@ -8121,7 +8121,7 @@ CREATE TABLE IF NOT EXISTS `fields` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
 
 --
--- Dumping data for table `fields`
+-- Fazendo dump de dados para tabela `fields`
 --
 
 INSERT INTO `fields` (`id`, `name`) VALUES
@@ -8147,7 +8147,7 @@ INSERT INTO `fields` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `junior_enterprises`
+-- Estrutura para tabela `junior_enterprises`
 --
 
 CREATE TABLE IF NOT EXISTS `junior_enterprises` (
@@ -8169,7 +8169,7 @@ CREATE TABLE IF NOT EXISTS `junior_enterprises` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=52 ;
 
 --
--- Dumping data for table `junior_enterprises`
+-- Fazendo dump de dados para tabela `junior_enterprises`
 --
 
 INSERT INTO `junior_enterprises` (`id`, `name`, `abbreviation`, `email`, `phone`, `website`, `university_id`, `city_id`, `image`, `created_at`, `updated_at`) VALUES
@@ -8182,12 +8182,12 @@ INSERT INTO `junior_enterprises` (`id`, `name`, `abbreviation`, `email`, `phone`
 (7, 'Mult Jr. - Consultorias em Projetos', 'Mult Jr.', 'multjr@multjr.com.br', '(31)3409-3695', 'http://www.multjr.com.br/', 1, 1630, 'http://www.multjr.com.br/wp-content/uploads/2012/04/logo-e1382143695842.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (8, 'PJ UFMG - Consultoria & Assessoria', 'PJ', 'marketing@producaojunior.com.br', '(31)3409-4809', 'http://www.pjufmg.com.br/', 1, 1630, 'http://pjufmg.com.br/wp-content/uploads/2015/06/logo-pjufmg.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (9, 'PUC Consultoria Jr.', 'Puc Jr.', 'contato@pucconsultoriajr.com.br', '(31)3319-4251', 'http://www.pucconsultoriajr.com.br/', 5, 1630, 'http://www.pucconsultoriajr.com.br/wp-content/uploads/2014/02/Logo-PCJ-Site-150x119.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(10, 'RH Consultoria Jr.', 'RH Jr.', 'contato@rhjr.com.br', '(31)3409-6316', 'http://www.rhjr.com.br/', 1, 1630, 'http://www.pucconsultoriajr.com.br/wp-content/uploads/2014/02/Logo-PCJ-Site-150x119.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(10, 'RH Consultoria Jr.', 'RH Jr.', 'contato@rhjr.com.br', '(31)3409-6316', 'http://www.rhjr.com.br/', 1, 1630, 'https://yt3.ggpht.com/-u2ntCoKb9LI/AAAAAAAAAAI/AAAAAAAAAAA/Q9CyOEuW_TM/s88-c-k-no/photo.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (11, 'UCJ - UFMG Consultoria Júnior.', 'UCJ', 'ucj@ucj.com.br', '(31)3499-3560', 'http://www.ucj.com.br/site/', 1, 1630, 'https://alertsequalificacao.files.wordpress.com/2011/01/ucj.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (12, 'Arbórea Florestal Jr.', 'Arbórea', 'arboreaflorestal@hotmail.com', '(38)3532-6922', ' ', 6, 1805, 'https://goo.gl/9Bzrf1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(13, 'Up Consultoria Jr.', 'Arbórea', 'contato@upconsultoriajr.com.br', '(31)3839-0863', 'http://upconsultoriajr.com.br/', 7, 1925, 'http://www.unifeijr.com.br/wp-content/uploads/2014/12/template-prj-site15.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(13, 'Up Consultoria Jr.', 'Up Consultoria Jr.', 'contato@upconsultoriajr.com.br', '(31)3839-0863', 'http://upconsultoriajr.com.br/', 7, 1925, 'http://www.unifeijr.com.br/wp-content/uploads/2014/12/template-prj-site15.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (14, 'UNIFEI Jr.', 'UNIFEI Jr.', 'contato@unifejr.com.br', '(35)3629-1640', 'www.unifeijr.com.br', 7, 1932, 'http://www.unifeijr.com.br/site/wp-content/uploads/2013/09/template-prj-site1.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(15, 'Inova Consultoria Jr.', 'Inova', 'contato@inovaconsultoriajr.com.br', '(31)3852-8853', 'http://www.inovaconsultoriajr.com.br/novo_site/', 8, 1975, 'http://www.unifeijr.com.br/site/wp-content/uploads/2013/09/template-prj-site1.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(15, 'Inova Consultoria Jr.', 'Inova', 'contato@inovaconsultoriajr.com.br', '(31)3852-8853', 'http://www.inovaconsultoriajr.com.br/novo_site/', 8, 1975, 'http://www.inovaconsultoriajr.com.br/novo_site/images/banners/inova%20com%20slogan.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (16, 'Apsi', 'Apsi', 'contato@apsiconsultoriajr.com.br', '(32)2102-3190', 'http://www.ufjf.br/apsi/', 9, 1983, 'http://www.ufjf.br/wp-content/plugins/bannersnovo/arquivos/apsi/1.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (17, 'UFLA Jr.', 'UFLA Jr.', 'ufla_junior@yahoo.com.br', '(35)8861-9832', 'http://www.uflajr.com.br/', 10, 2000, 'http://www.ufla.br/ascom/wp-content/uploads/2012/03/ufla-junior.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (18, 'Tristate Jr.', 'Tristate', 'tristate@ufsj.edu.br', '(31)7306-5364', 'http://www.tristatejr.com/', 11, 2102, 'http://tristatejr.com/wp-content/uploads/2014/03/bannersite.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -8198,35 +8198,35 @@ INSERT INTO `junior_enterprises` (`id`, `name`, `abbreviation`, `email`, `phone`
 (23, 'Porte Empresa Jr.', 'Porte Empresa Jr.', 'portejr@portejr.com.br', '(32)2102-3430', 'http://www.ufjf.br/portejr/', 9, 1983, 'http://www.ufjf.br/wp-content/plugins/imgpgprinc_novo/arquivos/portejr/1.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (24, 'ATP Jr.', 'ATP Jr.', 'projetos.atp@gmail.com', '(31)8690-6761 / (31)', 'www.facebook.com/atpjunior', 11, 2102, 'https://premiocenje.files.wordpress.com/2012/12/logomarca-atp-jr-25x65cm-formato1.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (25, 'AgroPlan UFV', 'AgroPlan', 'agroplan@ufv.br', '(31)3899-2163', 'http://www.agroplanufv.com.br', 2, 202, 'http://1.bp.blogspot.com/-Y5ijV0dwLig/T8zUe6U2tUI/AAAAAAAACyY/pnnD2T51qs4/s1600/Logo+(fundo+transparente).png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(26, 'Ambiental Jr.', 'Ambiental Jr.', 'faleconosco@ambientaljr.com.br', '(31)3899-2714', 'http://www.ambientaljr.com.br/', 2, 202, 'http://www.ambientaljr.com.br/images/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(27, 'Cace Consultoria Jr.', 'Cace', 'cace@caceconsultoria.com.br', '(31)3899-1586', 'http://www.caceconsultoria.com.br/', 2, 202, 'http://www.caceconsultoria.com.br/wp-content/themes/hybrid-news/images/logo_cace.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(26, 'Ambiental Jr.', 'Ambiental Jr.', 'faleconosco@ambientaljr.com.br', '(31)3899-2714', 'http://www.ambientaljr.com.br/', 2, 202, 'http://s14.postimg.org/5aelkm8ao/Ambiental.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(27, 'Cace Consultoria Jr.', 'Cace', 'cace@caceconsultoria.com.br', '(31)3899-1586', 'http://www.caceconsultoria.com.br/', 2, 202, 'http://s17.postimg.org/c5s1c9i0f/CACE.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (28, 'In Bio - Empresa Junior de Biologia', 'InBio', 'inbio.ej@gmail.com', '(31)3899-2714', 'http://www.inbio.ufv.br/', 2, 202, 'https://goo.gl/IyL8sp', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(29, 'Sinergia Jr.', 'Sinergia', 'contato@sinergiaufv.com', '(31)3899-1745', 'http://sinergiaufv.com/', 2, 202, 'https://goo.gl/IyL8sp', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(29, 'Sinergia Jr.', 'Sinergia', 'contato@sinergiaufv.com', '(31)3899-1745', 'http://sinergiaufv.com/', 2, 202, 'http://sinergiaufv.com/wp-content/uploads/2015/02/logo8.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (30, 'Soluções Consultoria Jr.', 'Soluções Consultorias Jr.', 'solucoes@ufv.br', '(31)3899-3267', 'http://solucoesufv.com.br/servicos/', 2, 202, 'http://solucoesufv.com.br/wp-content/uploads/2014/07/sitelogo1.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(31, 'Projet Jr.', 'Soluções Consultorias Jr.', 'presidencia.ufop@em.ufop.br', '(31)7564-7439', 'www.projet.ufop.br', 8, 2104, 'http://www.projet.ufop.br/wp-content/uploads/2015/05/semfundo3.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(31, 'Projet Jr.', 'Projet Jr.', 'presidencia.ufop@em.ufop.br', '(31)7564-7439', 'www.projet.ufop.br', 8, 2104, 'http://www.projet.ufop.br/wp-content/uploads/2015/05/semfundo3.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (32, 'Sênior Consultorias Ambiental Jr.', 'Sênior', 'contato@seniorconsultoriajr.com.br', '(31)9970-3019', 'http://www.seniorconsultoriajr.com.br/', 8, 1975, 'http://www.seniorconsultoriajr.com.br/Logo_20-_20S_C3_AAnior_20Fundo_20Transparente.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(33, 'CAMPE Consultorias Jr.', 'Campe', 'atendimento@campe.com.br', '(32)2102-3529', 'http://www.campe.com.br/', 9, 1983, 'http://www.campe.com.br/wp-content/themes/sitecampe/img/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(33, 'CAMPE Consultorias Jr.', 'Campe', 'atendimento@campe.com.br', '(32)2102-3529', 'http://www.campe.com.br/', 9, 1983, 'http://www.campe.com.br/assets_site/images/logo_campe.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (34, 'Granbery Consultoria', 'Granbery', 'contato@granberyconsultoria.com.br', '(32)2101-1877', 'http://www.granberyconsultoria.com.br/', 9, 1983, 'http://www.granberyconsultoria.com.br/img/gcons.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(35, 'Mais Consultoria Jr.', 'Mais', 'maisconsultoria@maisconsultoria.com.br', '(32)2102-3447', 'http://maisconsultoria.com.br/site/contato/', 9, 1983, 'http://www.granberyconsultoria.com.br/img/gcons.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(35, 'Mais Consultoria Jr.', 'Mais', 'maisconsultoria@maisconsultoria.com.br', '(32)2102-3447', 'http://maisconsultoria.com.br/site/contato/', 9, 1983, 'http://maisconsultoria.com.br/site/wp-content/uploads/2015/04/Logo.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (36, 'Dinâmica Consultoria Jr.', 'Dinâmica', 'contato@dinamicajr.com.br', '(32)3379-2366', 'dinamicajr.com.br', 12, 2295, 'http://dinamicajr.com.br/wp-content/uploads/2015/08/Logo-Din%C3%A2mica.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (37, 'Ômega Jr.', 'Ômega', 'contato@omegajunior.com.br', '(32)3371-7551', 'http://omegajunior.com.br/', 12, 2295, 'http://omegajunior.com.br/wp-content/uploads/2015/02/omega-logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (38, 'Perfil - Consultoria Jr. em Psicologia', 'Perfil Jr.', 'perfil.ufsj@yahoo.com.br', '(32)3379-2352', 'http://www.perfiljr.com.br/contato/', 12, 2295, 'http://www.perfiljr.com.br/wp-content/themes/retro-fitted/images/logopf.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(39, 'Ejel - Consultoria e Projetos Elétricos Jr.', 'Perfil Jr.', 'contato@ejel.com.br', '(32)3379-2352', 'http://www.ejel.com.br/', 12, 2295, 'http://www.ejel.com.br/images/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(40, 'ACPE - Assessoria Consultoria Planejamento Econômico', 'ACPE Jr.', 'acpe@ie.ufu.br', '(34)3239-4526', 'http://www.acpeconsultoria.com.br/', 13, 2389, 'http://www.ejel.com.br/images/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(39, 'Ejel - Consultoria e Projetos Elétricos Jr.', 'Ejel', 'contato@ejel.com.br', '(32)3379-2352', 'http://www.ejel.com.br/', 12, 2295, 'http://www.ejel.com.br/images/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(40, 'ACPE - Assessoria Consultoria Planejamento Econômico', 'ACPE Jr.', 'acpe@ie.ufu.br', '(34)3239-4526', 'http://www.acpeconsultoria.com.br/', 13, 2389, 'https://static.wixstatic.com/media/b3ec0b_45322a5dd8c940139890c9fc0bcb4eb4.png/v1/fit/w_329,h_145,usm_0.50_1.20_0.00/b3ec0b_45322a5dd8c940139890c9fc0bcb4eb4.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (41, 'Apoio Consultoria Jr.', 'Apoio', 'contato@apoioconsultoria.adm.br', '(34)3239-4460', 'http://www.apoioconsultoria.adm.br/', 13, 2389, 'http://www.apoioconsultoria.adm.br/img/logomarca.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (42, 'Conselt - Consultoria em Engenharia Elétrica', 'Conselt', 'conselt@ufu.br', '(34)3239-4759', 'http://www.conselt.eletrica.ufu.br/', 13, 2389, 'http://www.conselt.eletrica.ufu.br/images/logoconselt.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(43, 'Meta Consultoria Jr.', 'Meta', 'contato@metaej.com.br', '(34)3239-4005', 'http://www.conselt.eletrica.ufu.br/', 13, 2389, 'http://www.conselt.eletrica.ufu.br/images/logoconselt.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(43, 'Meta Consultoria Jr.', 'Meta', 'contato@metaej.com.br', '(34)3239-4005', 'http://metaej.com.br/', 13, 2389, 'http://metaej.com.br/images/Logo6.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (44, 'Alimentos Jr.', 'Alimentos', 'contato@alimentosjunior.com.br', '(31)3899-1840', 'http://www.alimentosjunior.com.br/', 2, 202, 'http://alimentosjunior.com.br/wp-content/uploads/2014/05/logo.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (45, 'Educação Física Consultoria, Assessoria e Prestação de Serviços', 'Eficap', 'eficap.presidente@gmail.com', '(31)3899-3284', 'http://www.eficap.com.br/', 2, 202, 'http://files.eficap.com.br/200003112-edfe7eef7f/logos.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (46, 'SEC Jr. Consultoria', 'SEC Jr.', 'contato@secjr.com', '(31)3899-1584', 'http://www.secjr.ufv.br/', 2, 202, 'http://www.secjr.ufv.br/CSS/Imagens/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(47, 'UFV Jr. Florestal', 'Florestal', 'ufvjrflorestal@gmail.com', '(31)3899-1192', 'www.florestaljr.ufv.br', 2, 202, 'http://www.404notfound.fr/assets/images/pages/img/androiddev101.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(47, 'UFV Jr. Florestal', 'Florestal', 'ufvjrflorestal@gmail.com', '(31)3899-1192', 'www.florestaljr.ufv.br', 2, 202, 'http://s11.postimg.org/6tg3o37o3/Florestal.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (50, 'No Bugs', 'No Bugs', 'contato@nobugs.com.br', '(31)3899-1792', 'http://nobugs.com.br/site/', 2, 2409, 'http://goo.gl/aMqy3f', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (51, 'UFMG Informática Jr.', 'Ijúnior', 'contato@ijunior.com.br', '(31)3409-5593', 'http://ijunior.com.br/site/', 1, 1630, 'http://ijunior.com.br/site/img/faixa/logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Estrutura para tabela `migrations`
 --
 
 CREATE TABLE IF NOT EXISTS `migrations` (
@@ -8235,7 +8235,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Fazendo dump de dados para tabela `migrations`
 --
 
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
@@ -8252,7 +8252,7 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
+-- Estrutura para tabela `services`
 --
 
 CREATE TABLE IF NOT EXISTS `services` (
@@ -8264,7 +8264,7 @@ CREATE TABLE IF NOT EXISTS `services` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=125 ;
 
 --
--- Dumping data for table `services`
+-- Fazendo dump de dados para tabela `services`
 --
 
 INSERT INTO `services` (`id`, `name`, `field_id`) VALUES
@@ -8395,7 +8395,7 @@ INSERT INTO `services` (`id`, `name`, `field_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `service_je`
+-- Estrutura para tabela `service_je`
 --
 
 CREATE TABLE IF NOT EXISTS `service_je` (
@@ -8406,7 +8406,7 @@ CREATE TABLE IF NOT EXISTS `service_je` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `service_je`
+-- Fazendo dump de dados para tabela `service_je`
 --
 
 INSERT INTO `service_je` (`service_id`, `je_id`) VALUES
@@ -8691,7 +8691,7 @@ INSERT INTO `service_je` (`service_id`, `je_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `states`
+-- Estrutura para tabela `states`
 --
 
 CREATE TABLE IF NOT EXISTS `states` (
@@ -8704,7 +8704,7 @@ CREATE TABLE IF NOT EXISTS `states` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
 
 --
--- Dumping data for table `states`
+-- Fazendo dump de dados para tabela `states`
 --
 
 INSERT INTO `states` (`id`, `name`, `uf`, `country_id`) VALUES
@@ -8739,7 +8739,7 @@ INSERT INTO `states` (`id`, `name`, `uf`, `country_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `universities`
+-- Estrutura para tabela `universities`
 --
 
 CREATE TABLE IF NOT EXISTS `universities` (
@@ -8749,7 +8749,7 @@ CREATE TABLE IF NOT EXISTS `universities` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
 
 --
--- Dumping data for table `universities`
+-- Fazendo dump de dados para tabela `universities`
 --
 
 INSERT INTO `universities` (`id`, `name`) VALUES
@@ -8770,7 +8770,7 @@ INSERT INTO `universities` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estrutura para tabela `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -8789,7 +8789,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `users`
+-- Fazendo dump de dados para tabela `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `administrator`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -8798,7 +8798,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `administrator`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
@@ -8817,7 +8817,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1145 ;
 
 --
--- Dumping data for table `usuarios`
+-- Fazendo dump de dados para tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`codUsuario`, `nomeCompleto`, `email`, `senha`, `ej`, `federacao`, `dataNascimento`, `cargoMej`, `evento`, `areaInteresse`, `tempoMej`) VALUES
@@ -9965,37 +9965,37 @@ INSERT INTO `usuarios` (`codUsuario`, `nomeCompleto`, `email`, `senha`, `ej`, `f
 (1144, 'Ingrid Maíra Costa Almeida', 'ingridalmeida.meta@gmail.com', '18c4c7008d08008968b496fdb43dad1d', 'Meta consultoria', 'FEJEMG', '13/09/1995', 'trainne', 'nunca participei de um evento', 'Gestão de Pessoas- Endomarketing', 0);
 
 --
--- Constraints for dumped tables
+-- Restrições para dumps de tabelas
 --
 
 --
--- Constraints for table `cities`
+-- Restrições para tabelas `cities`
 --
 ALTER TABLE `cities`
   ADD CONSTRAINT `cities_state_id_foreign` FOREIGN KEY (`state_id`) REFERENCES `states` (`id`);
 
 --
--- Constraints for table `junior_enterprises`
+-- Restrições para tabelas `junior_enterprises`
 --
 ALTER TABLE `junior_enterprises`
   ADD CONSTRAINT `junior_enterprises_city_id_foreign` FOREIGN KEY (`city_id`) REFERENCES `cities` (`id`),
   ADD CONSTRAINT `junior_enterprises_university_id_foreign` FOREIGN KEY (`university_id`) REFERENCES `universities` (`id`);
 
 --
--- Constraints for table `services`
+-- Restrições para tabelas `services`
 --
 ALTER TABLE `services`
   ADD CONSTRAINT `services_field_id_foreign` FOREIGN KEY (`field_id`) REFERENCES `fields` (`id`);
 
 --
--- Constraints for table `service_je`
+-- Restrições para tabelas `service_je`
 --
 ALTER TABLE `service_je`
   ADD CONSTRAINT `service_je_je_id_foreign` FOREIGN KEY (`je_id`) REFERENCES `junior_enterprises` (`id`),
   ADD CONSTRAINT `service_je_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`);
 
 --
--- Constraints for table `states`
+-- Restrições para tabelas `states`
 --
 ALTER TABLE `states`
   ADD CONSTRAINT `states_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`);

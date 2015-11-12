@@ -55,7 +55,7 @@ function buildTable($result){
 					$table += '</tr>';
 					$activity = $result[$i]['name'];
 				}
-				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 1){
+				if($result[$i]['name'] == $result[$j]['name']){
 					$table += '<tr>';
 					$table += '<td><img src="' + $result[$j]['image'] + '" alt="Logo" class="img-logos"></td>';
 					$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
