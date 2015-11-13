@@ -39,41 +39,50 @@ function fillResults(){
 function buildTable($result){
 	var $i, $j, $k;
 	var $table = '';
-	var $activity;
+	var $activity, $render = true;
 
 	$table += '<table class="table"> <thead> '; 
-//	$table += '<tr><th>Logo</th> <th>Nome</th> <th>Email</th> <th>Telefone</th> <th>Website</th> <th>Classificação</th> </tr>';
 	$table += '</thead>';
 	$table += '<tbody>';
-		
+	
+	//$result[$i]['name'] = nome da Atividade
 	for($i=0; $i<$result.length-1; $i++){
-		if($activity != $result[$i]['name']){
-			for($j=0; $j<$result.length-1; $j++){
-				console.log($result[$i]);	
-				if($result[$i]['name'] != $activity){
-					$table += '<tr class="red_fejemg">';
-					$table += '<td colspan="6" class="text-center lead white-text">' + $result[$i]['name'] + '</td>';
-					$table += '</tr>';
-					$activity = $result[$i]['name']; 
+		if($activity != $result[$i]['name']){			
+			for($k=0; $k<$result.length-1; $k++){
+				if($result[$i]['name'] == $result[$k]['name'] && $result[$k]['classification'] > 3){
+					$render = true;
+					break;
+				} else {
+					$render = false;
 				}
-				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 3){
-					$table += '<tr>';
-					$table += '<td><img src="' + $result[$j]['image'] + '" alt="'+ $result[$j]['abbreviation'] +'" class="img-logos"></td>';
-					//$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
-					$table += '<td>'+ $result[$j]['email'] +'</td>';
-					$table += '<td>'+ $result[$j]['phone'] +'</td>';
-					$table += '<td><a href="'+ $result[$j]['website'] +'" target="_blank">'+ $result[$j]['website'] +'</a></td>';
-					$table += '<td>'; 
-					for($k=0; $k<$result[$j]['classification']; $k++){
-						$table += '<img src="resources/images/gold_star_icon.png" alt="' + $result[$j]['classification'] + ' estrelas">';
+			}			
+			if($render){
+				for($j=0; $j<$result.length-1; $j++){
+					console.log($result[$i]);	
+					if($result[$i]['name'] != $activity){
+						$table += '<tr class="red_fejemg">';
+						$table += '<td colspan="6" class="text-center lead white-text">' + $result[$i]['name'] + '</td>';
+						$table += '</tr>';
+						$activity = $result[$i]['name']; 
 					}
-					for($k=0; $k<5-$result[$j]['classification']; $k++){
-						$table += '<img src="resources/images/gold_star_icon_lightness.png" alt="' + $result[$j]['classification'] + ' estrelas">';
-					}					
-					$table += '</td>';
-					$table += '</tr>';
-					console.log($result[$j]);
-				}
+					if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 3){
+						$table += '<tr>';
+						$table += '<td><img src="' + $result[$j]['image'] + '" alt="'+ $result[$j]['abbreviation'] +'" class="img-logos"></td>';
+						$table += '<td>'+ $result[$j]['email'] +'</td>';
+						$table += '<td>'+ $result[$j]['phone'] +'</td>';
+						$table += '<td><a href="'+ $result[$j]['website'] +'" target="_blank">'+ $result[$j]['website'] +'</a></td>';
+						$table += '<td>'; 
+						for($k=0; $k<$result[$j]['classification']; $k++){
+							$table += '<img src="resources/images/gold_star_icon.png" alt="' + $result[$j]['classification'] + ' estrelas">';
+						}
+						for($k=0; $k<5-$result[$j]['classification']; $k++){
+							$table += '<img src="resources/images/gold_star_icon_lightness.png" alt="' + $result[$j]['classification'] + ' estrelas">';
+						}					
+						$table += '</td>';
+						$table += '</tr>';
+						console.log($result[$j]);
+					}
+				}				
 			}
 		}
 	}	      
@@ -81,7 +90,6 @@ function buildTable($result){
   	//console.log($table);	
   	return $table;
 }
-
 
 
 
