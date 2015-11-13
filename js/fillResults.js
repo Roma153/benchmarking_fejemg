@@ -54,7 +54,7 @@ function buildTable($result){
 					$table += '<tr class="red_fejemg">';
 					$table += '<td colspan="6" class="text-center lead white-text">' + $result[$i]['name'] + '</td>';
 					$table += '</tr>';
-					$activity = $result[$i]['name'];
+					$activity = $result[$i]['name']; 
 				}
 				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 3){
 					$table += '<tr>';
