@@ -1,34 +1,24 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-.img-logos{
+.img-logos {
 	height: auto;
 	width: 140px;
-	max-height: 140px;    
+	max-height: 140px;
 }
 
 td {
 	height: 100px;
-    vertical-align: middle !important;
+	vertical-align: middle !important;
 }
 
-.white-background{
-	background-color: #FFF ;
+.white-background {
+	background-color: #FFF;
+}
+.red_fejemg {
+	background-color: #A8083B !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.white-text {
+	color: white;
+}

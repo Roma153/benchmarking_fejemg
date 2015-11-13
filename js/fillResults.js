@@ -1,5 +1,6 @@
 $(window).load(function() {
- fillResults();
+ //Descomente o comentário abaixo para que os resultados carreguem logo no início.
+ //fillResults();
 });
 
 $( "#cities" ).change(function() {
@@ -40,7 +41,7 @@ function buildTable($result){
 	var $table = '';
 	var $activity;
 
-	$table += '<table class="table table-striped"> <thead> '; 
+	$table += '<table class="table"> <thead> '; 
 //	$table += '<tr><th>Logo</th> <th>Nome</th> <th>Email</th> <th>Telefone</th> <th>Website</th> <th>Classificação</th> </tr>';
 	$table += '</thead>';
 	$table += '<tbody>';
@@ -50,12 +51,12 @@ function buildTable($result){
 			for($j=0; $j<$result.length-1; $j++){
 				console.log($result[$i]);	
 				if($result[$i]['name'] != $activity){
-					$table += '<tr class="info">';
-					$table += '<td colspan="6" class="text-center lead">' + $result[$i]['name'] + '</td>';
+					$table += '<tr class="red_fejemg">';
+					$table += '<td colspan="6" class="text-center lead white-text">' + $result[$i]['name'] + '</td>';
 					$table += '</tr>';
 					$activity = $result[$i]['name'];
 				}
-				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 1){
+				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 3){
 					$table += '<tr>';
 					$table += '<td><img src="' + $result[$j]['image'] + '" alt="Logo" class="img-logos"></td>';
 					$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
