@@ -58,8 +58,8 @@ function buildTable($result){
 				}
 				if($result[$i]['name'] == $result[$j]['name'] && $result[$j]['classification'] > 3){
 					$table += '<tr>';
-					$table += '<td><img src="' + $result[$j]['image'] + '" alt="Logo" class="img-logos"></td>';
-					$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
+					$table += '<td><img src="' + $result[$j]['image'] + '" alt="'+ $result[$j]['abbreviation'] +'" class="img-logos"></td>';
+					//$table += '<td><h3>'+ $result[$j]['abbreviation'] +'</h3></td>';
 					$table += '<td>'+ $result[$j]['email'] +'</td>';
 					$table += '<td>'+ $result[$j]['phone'] +'</td>';
 					$table += '<td><a href="'+ $result[$j]['website'] +'" target="_blank">'+ $result[$j]['website'] +'</a></td>';
